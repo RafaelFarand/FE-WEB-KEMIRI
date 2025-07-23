@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Desa Kemiri - Tulung, Klaten</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary-green: #1b5e20;
+      --secondary-green: #2e7d32;
+      --accent-green: #4caf50;
+      --light-green: #e8f5e8;
+      --gold: #ffd700;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)) !important;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: white !important;
+    }
+
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      color: var(--gold) !important;
+      transform: translateY(-2px);
+    }
+
+    .hero-section {
+      background: linear-gradient(rgba(27, 94, 32, 0.7), rgba(46, 125, 50, 0.7)),
+        url('../assets/senja kemiri.jpeg');
+      background-size: cover;
+      background-position: center;
+      min-height: 500px;
+      display: flex;
+      align-items: center;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-badge {
+      background: var(--gold);
+      color: var(--primary-green);
+      padding: 0.5rem 1rem;
+      border-radius: 25px;
+      font-weight: bold;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .video-section {
+      background: var(--light-green);
+      padding: 3rem 1rem;
+    }
+
+    .video-placeholder {
+      background: linear-gradient(135deg, var(--secondary-green), var(--accent-green));
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .video-placeholder:hover {
+      transform: translateY(-5px);
+    }
+
+    .history-section {
+      background: white;
+      padding: 3rem 1rem;
+    }
+
+    .history-image {
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .history-image:hover {
+      transform: scale(1.05);
+    }
+
+    .history-text {
+      background: var(--light-green);
+      padding: 2rem;
+      border-radius: 15px;
+      border-left: 5px solid var(--accent-green);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-section {
+      background: var(--light-green);
+      padding: 3rem 1rem;
+    }
+
+    .news-card {
+      background: white;
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      margin-bottom: 1.5rem;
+    }
+
+    .news-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-image {
+      border-radius: 10px;
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+    }
+
+    .news-title {
+      color: var(--primary-green);
+      font-weight: 600;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+
+    .btn-custom {
+      background: var(--accent-green);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 500;
+    }
+
+    .btn-custom:hover {
+      background: var(--secondary-green);
+      transform: translateY(-2px);
+    }
+
+    .footer {
+      background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .footer-content {
+      border-top: 2px solid var(--gold);
+      padding-top: 1rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="homepage.html">
+        <i class="fas fa-home me-2"></i>DESA KEMIRI
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="infoDesaDropdown" role="button" data-bs-toggle="dropdown">
+              <i class="fas fa-info-circle me-1"></i>Info Desa
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="struktural_perangkat.html"><i class="fas fa-users me-2"></i>Struktural
+                  Desa</a></li>
+              <li><a class="dropdown-item" href="data_penduduk.html"><i class="fas fa-chart-bar me-2"></i>Data
+                  Penduduk</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="sejarah_desa.html">
+              <i class="fas fa-history me-1"></i>Sejarah Desa
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="wisata.html">
+              <i class="fas fa-map-marked-alt me-1"></i>Potensi Wisata
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="komoditas.html">
+              <i class="fas fa-seedling me-1"></i>Potensi Komoditas
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="peta.html">
+              <i class="fas fa-map me-1"></i>Peta Desa
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-content">
+        <h1 class="hero-title">Selamat Datang di Desa Kemiri</h1>
+        <p class="hero-subtitle">Kecamatan Tulung, Kabupaten Klaten, Jawa Tengah</p>
+        <p class="hero-subtitle">Desa yang maju dengan potensi wisata dan komoditas unggulan</p>
+        <div class="hero-badge">
+          <i class="fas fa-award me-2"></i>Desa Mandiri & Berkelanjutan
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="video-section">
+    <div class="container text-center">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6">
+        <video controls style="width: 100%; border-radius: 10px;">
+          <source src="../assets/vidio_kades_kemiri.mp4" type="video/mp4">
+          Browser Anda tidak mendukung tag video.
+        </video>
+        <p class="text-white mt-3">Video Profil Desa</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Profile Desa -->
+  <section class="history-section">
+    <div class="container">
+      <h3 class="section-title text-center">Profile Desa Kemiri</h3>
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-4">
+          <img
+            src="../assets/fajar kemiri.jpeg"
+            class="img-fluid history-image" alt="Balai Desa Kemiri">
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="history-text">
+            <h5 class="mb-3" style="color: var(--primary-green);">
+              <i class="fas fa-landmark me-2"></i>Tentang Desa Kemiri
+            </h5>
+            <p class="mb-3">
+              Desa Kemiri adalah sebuah desa yang terletak di Kecamatan Tulung, Kabupaten Klaten, Jawa Tengah,
+              Indonesia. Desa ini memiliki posisi strategis dengan batas wilayah yang jelas dan akses yang mudah.
+            </p>
+            <p class="mb-3"><strong>Batas Wilayah:</strong><br>
+              • Barat: Desa Depok<br>
+              • Timur: Desa Bono<br>
+              • Selatan: Desa Gedong<br>
+              • Utara: Desa Sumberejo
+            </p>
+            <p class="mb-0">
+              Sebagai salah satu wilayah Klaten yang maju, Desa Kemiri memiliki infrastruktur dan akses jalan yang
+              memadai, serta potensi wisata dan komoditas yang terus berkembang.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Berita & Informasi -->
+  <section class="news-section">
+    <div class="container">
+      <h3 class="text-center mb-4">Berita & Informasi Terkini</h3>
+      <div class="row" id="beritaCardsContainer"></div>
+      <div class="text-center mt-4">
+        <a href="page_berita.html" class="btn btn-custom">
+          <i class="fas fa-newspaper me-2"></i>Lihat Semua Berita
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 text-center text-md-start">
+          <h5><i class="fas fa-home me-2"></i>DESA KEMIRI</h5>
+          <p class="mb-2">Kecamatan Tulung, Kabupaten Klaten</p>
+          <p class="mb-0">Jawa Tengah, Indonesia</p>
+        </div>
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <h6><i class="fas fa-graduation-cap me-2"></i>KKN BELA NEGARA 83</h6>
+          <p class="mb-0">UPN Veteran Yogyakarta</p>
+        </div>
+      </div>
+      <div class="footer-content">
+        <p class="mb-0">© 2025 Desa Kemiri</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    async function fetchInformasiData() {
+      const beritaContainer = document.getElementById('beritaCardsContainer');
+      beritaContainer.innerHTML = `
+        <div class="text-center p-4">
+          <div class="spinner-border text-primary" role="status"></div>
+          <p>Loading...</p>
+        </div>
+      `;
+
+      try {
+        const response = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/informasi');
+        const data = await response.json();
+
+        if (data.length) {
+          const beritaHTML = data.slice(0, 3).map(info => {
+            const tanggal = new Date(info.createdAt).toLocaleDateString('id-ID', {
+              day: 'numeric', month: 'long', year: 'numeric'
+            });
+            return `
+              <div class="col-12 col-md-6 col-lg-4">
+                <a href="berita_detail.html?id=${info.id}" class="text-decoration-none text-dark">
+                  <div class="card news-card">
+                    <div class="card-body">
+                      <div class="row align-items-center">
+                        <div class="col-4">
+                          <img src="${info.image_url || 'https://via.placeholder.com/200x150?text=No+Image'}" class="news-image" alt="Berita">
+                        </div>
+                        <div class="col-8">
+                          <h6 class="news-title">${info.judul}</h6>
+                          <small class="text-muted"><i class="fas fa-calendar-alt me-1"></i>${tanggal}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>`;
+          }).join('');
+          beritaContainer.innerHTML = beritaHTML;
+        } else {
+          beritaContainer.innerHTML = '<div class="text-center p-4 text-warning">Belum ada berita & informasi.</div>';
+        }
+
+      } catch (err) {
+        beritaContainer.innerHTML = '<div class="text-center p-4 text-danger">Gagal memuat berita & informasi.</div>';
+        console.error(err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', fetchInformasiData);
+  </script>
+</body>
+
+</html>
