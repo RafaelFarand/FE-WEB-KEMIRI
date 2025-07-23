@@ -260,7 +260,7 @@
       const container = document.getElementById('komoditasContainer');
       container.innerHTML = `<div class="text-center p-4"><div class="spinner-border text-success"></div> Memuat data komoditas...</div>`;
       try {
-        const res = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/potensi-komoditas');
+        const res = await fetch('https://api.desa-kemiri.my.id/api/potensi-komoditas');
         const data = await res.json();
 
         if (!data.length) {
@@ -291,7 +291,7 @@
       beritaContainer.innerHTML = `<div class="text-center p-4"><div class="spinner-border text-success"></div> Memuat berita...</div>`;
 
       try {
-        const res = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/informasi');
+        const res = await fetch('https://api.desa-kemiri.my.id/api/informasi');
         const data = await res.json();
 
         if (!data.length) {
