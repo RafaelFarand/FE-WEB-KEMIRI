@@ -561,7 +561,7 @@
             perangkatDesaGrid.innerHTML = '<div class="text-center p-4"><div class="spinner-border text-primary" role="status"><span class="visually-hidden">Loading...</span></div> Loading Perangkat Desa data...</div>';
 
             try {
-                const response = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/struktural');
+                const response = await fetch('https://api.desa-kemiri.my.id/api/struktural');
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -634,7 +634,7 @@
             beritaContainer.innerHTML = `<div class="text-center p-4"><div class="spinner-border text-success"></div> Memuat...</div>`;
 
             try {
-                const response = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/informasi');
+                const response = await fetch('https://api.desa-kemiri.my.id/api/informasi');
                 const data = await response.json();
 
                 if (data.length) {

@@ -192,7 +192,7 @@
       if (!id) return;
 
       try {
-        const res = await fetch(`https://desa-kemiri-363721261053.us-central1.run.app/api/informasi/${id}`);
+        const res = await fetch(`https://api.desa-kemiri.my.id/api/informasi/${id}`);
         const data = await res.json();
         document.querySelector('.detail-image').src = data.image_url || 'https://via.placeholder.com/800x400?text=No+Image';
         document.querySelector('.detail-title').textContent = data.judul;

@@ -255,7 +255,7 @@
       if (!id) return;
 
       try {
-        const res = await fetch(`https://desa-kemiri-363721261053.us-central1.run.app/api/potensi-wisata/${id}`);
+        const res = await fetch(`https://api.desa-kemiri.my.id/api/potensi-wisata/${id}`);
         const data = await res.json();
         document.querySelector('.detail-image').src = data.image_url;
         document.querySelector('.detail-image').alt = data.judul;
@@ -272,7 +272,7 @@
       beritaContainer.innerHTML = `<div class="text-center p-4"><div class="spinner-border text-primary"></div>Loading...</div>`;
 
       try {
-        const response = await fetch('https://desa-kemiri-363721261053.us-central1.run.app/api/informasi');
+        const response = await fetch('https://api.desa-kemiri.my.id/api/informasi');
         const data = await response.json();
 
         if (data.length) {
